@@ -261,16 +261,56 @@
 
 // zipla();
 
-const isSameDay = (a, b) => {
-    return a.getFullYear() === b.getFullYear() &&
-      a.getMonth() === b.getMonth() &&
-      a.getDate()=== b.getDate()
-  }
+// const isSameDay = (a, b) => {
+//     return a.getFullYear() === b.getFullYear() &&
+//       a.getMonth() === b.getMonth() &&
+//       a.getDate()=== b.getDate()
+//   }
   
-  const a = new Date(2019, 0, 26, 10) // 26 Jan 2019, 10am
-  const b = new Date(2019, 0, 26, 12) // 26 Jan 2019, 12pm
-  console.log(isSameDay(a, b)) // true
+//   const a = new Date(2019, 0, 26, 10) // 26 Jan 2019, 10am
+//   const b = new Date(2019, 0, 26, 12) // 26 Jan 2019, 12pm
+//   console.log(isSameDay(a, b)) // true
 
-  let d1 = new Date();
+//   let d1 = new Date();
   
-  
+// let val = '40.5213';
+// val = Number(val);
+// val = parseInt(val);
+// let val = 'selam'
+// let valnum = 5.42324
+
+// let sonuc = isNaN(valnum); 
+// val = valnum.toPrecision(3);//3.4434 ü kes mesela 3.44
+// val = valnum.toFixed(2);//virgülden sonra şu haneden sonra yuvarla
+// console.log(sonuc);
+// console.log(val);
+// let mathli = Math.floor(3,8)//her zaman aşşağı yuvarla
+// mathli = Math.ceil(3,8)//her zaman yukarı yuvarla
+// mathli = Math.round(3,8)//adam akıllı yuvarla
+// mathli = Math.abs(-3)//mutlak
+// mathli = Math.min(1,2,34,7658,3);//en küçüğü ver
+// mathli = Math.max(1,2,34,7658,3);//en büyüğü ver
+// mathli = Math.floor(Math.random()*100+1) //0 ile 10 arasında random at
+ 
+// console.log(mathli);
+const firstname = 'engin';
+const lastname = "karataş";
+const age = 21;
+let val;
+val= firstname + " " +lastname
+val = "engin";
+val += ' garadaş'
+val = 'ben`im adım' + firstname + 'engin ve yaş:' + age + "izmit\`te" //ters slash önemi
+val = "engin";
+val = val.concat("karatas",20,"güzel güzel",'string yapar',0000099); //concat parametreleri yanyana ekler stringlerde
+// val = val.length //casting işlemini belirtmene gerek yok direk çeviriyor.
+val = val.toUpperCase();//tüm string karakterleri upper yapar
+val = val.toLowerCase();//kucuk
+
+let metin = "enginovski yada sonaovskiy"
+metin = metin.indexOf("engin"); //out:0, engin ifadesi 0dan başlar
+
+
+
+console.log(val);
+console.log(typeof val);
