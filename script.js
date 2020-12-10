@@ -273,7 +273,7 @@
 
 //   let d1 = new Date();
   
-// let val = '40.5213';
+let val = '40.5213';
 // val = Number(val);
 // val = parseInt(val);
 // let val = 'selam'
@@ -293,24 +293,69 @@
 // mathli = Math.floor(Math.random()*100+1) //0 ile 10 arasında random at
  
 // console.log(mathli);
-const firstname = 'engin';
-const lastname = "karataş";
-const age = 21;
-let val;
-val= firstname + " " +lastname
-val = "engin";
-val += ' garadaş'
-val = 'ben`im adım' + firstname + 'engin ve yaş:' + age + "izmit\`te" //ters slash önemi
-val = "engin";
-val = val.concat("karatas",20,"güzel güzel",'string yapar',0000099); //concat parametreleri yanyana ekler stringlerde
+// const firstname = 'engin';
+// const lastname = "karataş";
+// const age = 21;
+// let val;
+// val= firstname + " " +lastname
+// val = "engin";
+// val += ' garadaş'
+// val = 'ben`im adım' + firstname + 'engin ve yaş:' + age + "izmit\`te" //ters slash önemi
+// val = "engin";
+// val = val.concat("karatas",20,"güzel güzel",'string yapar',0000099); //concat parametreleri yanyana ekler stringlerde
 // val = val.length //casting işlemini belirtmene gerek yok direk çeviriyor.
-val = val.toUpperCase();//tüm string karakterleri upper yapar
-val = val.toLowerCase();//kucuk
+// val = val.toUpperCase();//tüm string karakterleri upper yapar
+// val = val.toLowerCase();//kucuk
 
-let metin = "enginovski yada sonaovskiy"
-metin = metin.indexOf("engin"); //out:0, engin ifadesi 0dan başlar
+// let metin = "enginovski yada sonaovskiy"
+// metin = metin.indexOf("engin"); //out:0, engin ifadesi 0dan başlar
+// val = metin.indexOf("ovski");//out:5, ovski ifadesini dizinin başında gördü ve döndürdü
+// val = metin.substring(7,13); //||||ovs|||| kırptı
+// val = metin.substring(7); //|||||||ovski yada sonaovskiy baştan kırptı
+// val = metin.slice(0,5)//altaratifi
+// val = metin.slice(7)//aynıları işte
+// val = metin.replace("yada",'yoda');//yada ifadesini yodayla değiştir
+
+// let trimleyelim = "   alfacenturi   " //lenght:17
+// val = trimleyelim.trim();//lenght:11
+// val = val.length;
+
+// let metin2 = "a,b,c,d,e,bişey bişey,z"
+// let metin3 = "oha çıktımı ~ harbi aa hayallerim gerçekleşti"
+// let metin4 = "www.enginkaraodun.com"
+// val = metin2.split(",");//virgüle göre dizi oluştur. val bir dizidir
+
+// val = metin4.substring(4);
+//yada
+// val = metin4.slice(4);
+// val = metin3.replace("~","")
+// val = metin3.split(" ").length//out:6
+//www ile başlıyor mu evet yada hayır ?
+// val = metin4.startsWith("www.")
+//.com ile bitiyormu evlet bana 1 0 söyle ya da .com varsa indexini ver 
+// val = metin4.includes(".com")//.com var ise true dönder
+// val = metin4.indexOf(".com")//.comun indexi kaçtaysa onu dönder(index yoksa -1 döner yani bunu ifleyebilirsin ama includesi bilmek faydalı olacaktır)
+
+//************istenmeyen durumları ortadan kaldır..************ */
+// let link = "  www.soonlikedimond.com/ArNavüT Köy is very intöresting"
+// //tüm harfleri küçük yaptıktan sonra baştan sondan boşluk brakma ve ondan sonra türkçe karakterleri ingilizce muadillerine çevir
+// link = link.trim();
+// console.log(link.toLowerCase()
+//                 .replace(/ö/g,"o")
+//                 .replace(/ü/g,"u")
+//                 .replace(/ /g,"-")
+//                 .split()
+//                 // .replace("ö","o") //bunu dersek sadece ilk gördüğü ö yı çevirir. Hepsi için:
+// )
 
 
 
-console.log(val);
-console.log(typeof val);
+// console.log(val);
+// console.log(typeof val);
+
+let sayi = 1921
+let yazi = "engin karataş kocaeli"
+let yas = 21;
+
+console.log(`${sayi} yılındaki olaylardan haberdar olmak için ${yas} numarasını arayın ve ${yazi} kişisine ulaşın dayı`)
+
