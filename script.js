@@ -210,21 +210,21 @@
 // ay.
 
 
- 
+
 // console.log('saniye farkı:'+saniye);
 // console.log('saat farkı:'+aralarindakiSaat);
 // console.log('ay farkı:'+ay);
 // console.log('gun farkı:'+gun);
 // console.log('dakika farkı:'+dakika);
 
- 
+
 // let ageDate = new Date(ageDifMs);
 // console.log(ageDate.getFullYear()-1970);
 
 // let annelerGunu = new Date('5/1/2019');
 
 // while (annelerGunu.getDay() != 0) {
-//     annelerGunu.setDate(annelerGunu.getDate()+1);    
+//     annelerGunu.setDate(annelerGunu.getDate()+1);
 // }
 // annelerGunu.setDate(annelerGunu.getDate()+7);
 // console.log(annelerGunu);
@@ -266,20 +266,20 @@
 //       a.getMonth() === b.getMonth() &&
 //       a.getDate()=== b.getDate()
 //   }
-  
+
 //   const a = new Date(2019, 0, 26, 10) // 26 Jan 2019, 10am
 //   const b = new Date(2019, 0, 26, 12) // 26 Jan 2019, 12pm
 //   console.log(isSameDay(a, b)) // true
 
 //   let d1 = new Date();
-  
+
 let val = '40.5213';
 // val = Number(val);
 // val = parseInt(val);
 // let val = 'selam'
 // let valnum = 5.42324
 
-// let sonuc = isNaN(valnum); 
+// let sonuc = isNaN(valnum);
 // val = valnum.toPrecision(3);//3.4434 ü kes mesela 3.44
 // val = valnum.toFixed(2);//virgülden sonra şu haneden sonra yuvarla
 // console.log(sonuc);
@@ -291,7 +291,7 @@ let val = '40.5213';
 // mathli = Math.min(1,2,34,7658,3);//en küçüğü ver
 // mathli = Math.max(1,2,34,7658,3);//en büyüğü ver
 // mathli = Math.floor(Math.random()*100+1) //0 ile 10 arasında random at
- 
+
 // console.log(mathli);
 // const firstname = 'engin';
 // const lastname = "karataş";
@@ -332,7 +332,7 @@ let val = '40.5213';
 // val = metin3.split(" ").length//out:6
 //www ile başlıyor mu evet yada hayır ?
 // val = metin4.startsWith("www.")
-//.com ile bitiyormu evlet bana 1 0 söyle ya da .com varsa indexini ver 
+//.com ile bitiyormu evlet bana 1 0 söyle ya da .com varsa indexini ver
 // val = metin4.includes(".com")//.com var ise true dönder
 // val = metin4.indexOf(".com")//.comun indexi kaçtaysa onu dönder(index yoksa -1 döner yani bunu ifleyebilirsin ama includesi bilmek faydalı olacaktır)
 
@@ -351,11 +351,102 @@ let val = '40.5213';
 
 
 // console.log(val);
-// console.log(typeof val);
+// console.l og(typeof val);
 
-let sayi = 1921
-let yazi = "engin karataş kocaeli"
-let yas = 21;
+//-------------------------------------11.12.2020 diziler
 
-console.log(`${sayi} yılındaki olaylardan haberdar olmak için ${yas} numarasını arayın ve ${yazi} kişisine ulaşın dayı`)
+let benimdizim = ["Engin","Ahmet","Süleyman","gaby","hope"];//diziler obje olarak tutulur jsde
+// let dizi = ["cabbar",null,256,undefined, ["alfa","beta"]];//bu şekilde farklı objeler verebiliriz
 
+// console.log(dizi);
+// benimdizim[benimdizim.length]= "cabbar"//pushun aynısı sonuna ekleme yapıyor.
+// benimdizim.push("selanlar");//listenin(array sonuna eleman ekleme)
+// benimdizim.unshift("gezelim");//listenin başına eleman ekleme
+// benimdizim.pop()//remove the last element of the array
+// benimdizim.shift();//remove firs item
+// console.log(benimdizim.indexOf('Süleyman'));//index of süleyman stringlerdeki indexof kullanımının aynısı
+// let valy = benimdizim.concat(dizi); //addiational items to end of array. arrayın sonuna diğer dizi elemanlarını ekler.
+// console.log(valy);
+
+// console.log(benimdizim.length);
+// let val2 = benimdizim.splice();//tüm diziyi sil
+// console.log(benimdizim);
+// let val2 = benimdizim.splice(2,4); // 2<yeni dizi elemanları< 4
+// benimdizim.splice(2,1,"seda","alican"); // 2. indisten sonra gördüğün ilk elemanı sil ve sildiğin boşlukların içine seda ve alican yaz
+// benimdizim.filter()
+//(kaçıncı indexten itibaren, kaç tane index sileyim? )
+//veya
+ //(kaçıncı indexten, kaç tane "silip hangi değeri yazayım?")//yukarıda tanımlamadım. dizilerde ilk defa kullanıyorum
+
+// console.log(benimdizim);
+// console.log(typeof benimdizim);
+
+//*********************
+// let myDearArray = [];
+// let myDearArray2 = [
+//     {ad:"manidar",soyad:"ayter",il:"Gastamonu"},
+//     {ad:"engin",soyad:"karataş",il:"Kocaeli"},
+//     {ad:"ahmet",soyad:"kara",il:"vietnam"}
+// ]
+
+// for (let i = 0; i < 20; i++) {
+//     myDearArray.push(Math.floor(Math.random(100)*100));
+// }
+//************XXXXXXXXXX************ */
+
+// let countsOfMyPick = myDearArray.filter(function(check){
+//     if(check > 50){
+//         return true;//o değer 50 den büyükse true döndürüyor ve check edilen o değer filter yardımıyla yakalanıp counsOfMyPicke dizi şeklinde yazılıyor
+//     }
+// })
+
+//OR
+
+// let countsOfMyPick = myDearArray.filter(x => x > 50);
+
+
+//***-->
+
+//find the an object.property equal to given string
+
+// let pickOnCountry = myDearArray2.filter(function(gelenSehir){
+//     if(gelenSehir.il === "Kocaeli") //gelensehir.il kocaeli ise
+//     return true;//o objeyi true yaptık ve filter truları yakaladı :)
+// });
+
+//or
+
+// let pickOnCountry = myDearArray2.filter(gelenObje => gelenObje.il === "Kocaeli");
+
+
+/***-->
+//************XXXXXXXXXXX********************* */
+
+// console.log(pickOnCountry);
+// console.log(myDearArray2);
+
+// console.log("************");
+// console.log(`counts of my picked random values: ${countsOfMyPick} and the numbers of greater than 50 is ${countsOfMyPick.length}`);
+// console.log(myDearArray);
+
+let dizimiz = ["tofaş",1,"toyota","reno","toyota",45,2,46,312,42,3,"renult","alfa","zen"]
+dizimiz.push("xxx")//sona ekle
+dizimiz.unshift("yyy")//başa ekle
+dizimiz.shift();//baştan sil
+dizimiz.pop();//sondan sil
+// dizimiz.sort()//diziyi alfabetik sırala(sayıları en öne alır ama alfabetik olarak sıralar. bunu aşmak için aşağıda bir adet küçükbasa fonksyonu yazdım)
+// dizimiz.reverse();//012345 indexlere sahip diziyi 543210 şeklinde sırala
+// function kucukbasa(a,b) {
+//     if(a>b){
+//         return 1;
+//     }
+//     if(a==b){
+//         return 0;
+//     }
+//     if(a<b) return -1;
+// }
+// dizimiz.sort(kucukbasa);
+console.log(dizimiz);
+
+console.log(dizimiz.indexOf("reno")); //reno dizinin hangi sırasındadır?
+console.log(dizimiz.includes("reno"));//reno dizide varsa true döndürür
