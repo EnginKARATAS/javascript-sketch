@@ -355,7 +355,7 @@ let val = '40.5213';
 
 //-------------------------------------11.12.2020 diziler
 
-let benimdizim = ["Engin","Ahmet","Süleyman","gaby","hope"];//diziler obje olarak tutulur jsde
+// let benimdizim = ["Engin","Ahmet","Süleyman","gaby","hope"];//diziler obje olarak tutulur jsde
 // let dizi = ["cabbar",null,256,undefined, ["alfa","beta"]];//bu şekilde farklı objeler verebiliriz
 
 // console.log(dizi);
@@ -376,7 +376,7 @@ let benimdizim = ["Engin","Ahmet","Süleyman","gaby","hope"];//diziler obje olar
 // benimdizim.filter()
 //(kaçıncı indexten itibaren, kaç tane index sileyim? )
 //veya
- //(kaçıncı indexten, kaç tane "silip hangi değeri yazayım?")//yukarıda tanımlamadım. dizilerde ilk defa kullanıyorum
+//(kaçıncı indexten, kaç tane "silip hangi değeri yazayım?")//yukarıda tanımlamadım. dizilerde ilk defa kullanıyorum
 
 // console.log(benimdizim);
 // console.log(typeof benimdizim);
@@ -429,11 +429,11 @@ let benimdizim = ["Engin","Ahmet","Süleyman","gaby","hope"];//diziler obje olar
 // console.log(`counts of my picked random values: ${countsOfMyPick} and the numbers of greater than 50 is ${countsOfMyPick.length}`);
 // console.log(myDearArray);
 
-let dizimiz = ["tofaş",1,"toyota","reno","toyota",45,2,46,312,42,3,"renult","alfa","zen"]
-dizimiz.push("xxx")//sona ekle
-dizimiz.unshift("yyy")//başa ekle
-dizimiz.shift();//baştan sil
-dizimiz.pop();//sondan sil
+// let dizimiz = ["tofaş",1,"toyota","reno","toyota",45,2,46,312,42,3,"renult","alfa","zen"]
+// dizimiz.push("xxx")//sona ekle
+// dizimiz.unshift("yyy")//başa ekle
+// dizimiz.shift();//baştan sil
+// dizimiz.pop();//sondan sil
 // dizimiz.sort()//diziyi alfabetik sırala(sayıları en öne alır ama alfabetik olarak sıralar. bunu aşmak için aşağıda bir adet küçükbasa fonksyonu yazdım)
 // dizimiz.reverse();//012345 indexlere sahip diziyi 543210 şeklinde sırala
 // function kucukbasa(a,b) {
@@ -446,7 +446,137 @@ dizimiz.pop();//sondan sil
 //     if(a<b) return -1;
 // }
 // dizimiz.sort(kucukbasa);
-console.log(dizimiz);
+// console.log(dizimiz);
 
-console.log(dizimiz.indexOf("reno")); //reno dizinin hangi sırasındadır?
-console.log(dizimiz.includes("reno"));//reno dizide varsa true döndürür
+// console.log(dizimiz.indexOf("reno")); //reno dizinin hangi sırasındadır?
+// console.log(dizimiz.includes("reno"));//reno dizide varsa true döndürür
+// console.log(benimdizim);
+// console.log(benimdizim.splice(1,3));//[1] [2] [3]. dizi elemanlarını döndürür
+// console.log(benimdizim.slice);//[1] [2] döndürür
+// console.log("sa");
+
+// let category = 'ambulans';
+
+// switch (category) {
+//     case 'telefon':
+//         console.log('04410230441');
+//         break;
+//     case 'bilgisayar':
+//         console.log('ofcourse'); 
+//         break;
+//     case 'savas':
+//         console.log("here is your ak-49");
+//         break;
+
+//     default:
+//         console.log("kanki aradığın şeyi bulamadık");
+// }
+
+// let date;
+
+// switch (new Date().getFullYear()) {
+//     case 2020:
+//         console.log(`sene 2020`);
+//         break;
+// }
+
+// switch (new Date().getDay()) {
+//     case 1:
+//         console.log('pazartesi');
+//         break;
+//     case 2:
+//         console.log("salı");
+//         break;
+//     case 3:
+//         console.log("çarşamba");
+//         break
+//     case 4:
+//         console.log("perşembe");
+//         break
+//     case 5:
+//         console.log("cuma");
+//         break;
+//     case 6:
+//         console.log("cumartesi");
+//         break;
+//     case 7:
+//         console.log("pazar");
+//         break;
+// }
+
+// switch (new Date().getDay()) {
+//     case 1:
+//     case 2:
+//     case 3:
+//     case 4:
+//     case 5:
+//         console.log("hafta içi");
+//         break;
+//     case 6:
+//     case 0:
+//         console.log("hafta sonu");
+//         break;
+// }
+
+//**************örnek 1 */
+
+// let tirafigeCikisTarihi = new Date(2017,4,20,0,0,0)
+// let tarihYilSimdi = new Date().getFullYear();
+
+// let bakimYil = tarihYilSimdi - tirafigeCikisTarihi.getFullYear();
+
+
+// switch(bakimYil){
+//     case 3: 
+//         console.log(`eh sende 3 yıl olmuş bakım yaptır artık`);
+//         break;
+//     case 2:
+//         console.log("bakım zamanınız çoktan geçti");
+//     case 1:
+//         console.log("bakım yaptırmanız tavsiye edilir");
+// }
+
+//****************örnek 2  */
+
+// let tirafigeCikisTarihi = new Date (2019,5,15);
+// tirafigeCikisTarihi.setHours(0,0,0,0);
+// let tirafigeCikisTarihiMs = tirafigeCikisTarihi.getTime();
+
+// let guncelTarih = Date.now();
+
+// let TrafiktekiMs = guncelTarih-tirafigeCikisTarihiMs;
+
+// let gun = TrafiktekiMs / (1000*60*60*24);
+// console.log(`gecen gun ${Math.floor(gun)}`);
+
+// console.log(`yil : ${Math.floor(gun/365)}`);
+
+var result = prompt("Hello anyone there ?", "Yes Or No");
+
+switch (result.toLowerCase()) {
+    case 'hell yes':
+    case 'yes':
+        let result2 = prompt("are you embarrassed?","1 or 0");
+        if (result2 == true && !isNaN(result2))
+            console.log("welcome big boy no be shy ");
+        else console.log("go away");
+        break;
+    case 'no':
+        console.log("Go out kid");
+            
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
