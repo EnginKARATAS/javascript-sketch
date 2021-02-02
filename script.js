@@ -273,7 +273,7 @@
 
 //   let d1 = new Date();
 
-let val = '40.5213';
+// let val = '40.5213';
 // val = Number(val);
 // val = parseInt(val);
 // let val = 'selam'
@@ -380,6 +380,23 @@ let val = '40.5213';
 
 // console.log(benimdizim);
 // console.log(typeof benimdizim);
+//_----------------------------------------------------------------
+//find metodu fonksyonla dizi elemanlarını okur.aşağıdaki fonksyonda eğer yas 21den küçükse true döneceği için 2002 yi ekrana gösterir. eğer return ifadesi true olursa dizinin ilk elemanını 1999 u getirecektir.
+//eğer return true yazarsan 1999 gelir
+//--
+//find yerine filter kullanılırsa bu sefer true olduğunda saymayı bırakmaz. dizinin tüm elemanlarını saymaya devam eder
+// let arr = [1999,1997,2000,2002,2003];
+
+// function getir(year) {
+//     let yas = 2021-year
+//     return yas<21
+// }
+
+// let val = arr.find(getir)
+// console.log(val);
+// let filterval = arr.filter(getir)
+// console.log(filterval);
+//----------------------------------------------------------------
 
 //*********************
 // let myDearArray = [];
@@ -551,32 +568,101 @@ let val = '40.5213';
 
 // console.log(`yil : ${Math.floor(gun/365)}`);
 
-var result = prompt("Hello anyone there ?", "Yes Or No");
+// var result = prompt("Hello anyone there ?", "Yes Or No");
 
-switch (result.toLowerCase()) {
-    case 'hell yes':
-    case 'yes':
-        let result2 = prompt("are you embarrassed?","1 or 0");
-        if (result2 == true && !isNaN(result2))
-            console.log("welcome big boy no be shy ");
-        else console.log("go away");
-        break;
-    case 'no':
-        console.log("Go out kid");
-            
+// switch (result.toLowerCase()) {
+//     case 'hell yes':
+//     case 'yes':
+//         let result2 = prompt("are you embarrassed?","1 or 0");
+//         if (result2 == true && !isNaN(result2))
+//             console.log("welcome big boy no be shy ");
+//         else console.log("go away");
+//         break;
+//     case 'no':
+//         console.log("Go out kid");
+
+// }
+//----------------------------------------------------------------
+//------------------------2.02.2021
+//arguments özel bir ifadedir. fonksyona gelen parametreleri sayar. fonksyında parametre belirtmek zorunlu değildir
+// function args() {
+//     console.log(arguments);
+// }
+// args(4,34,24,234)
+//Not:eğer bir şey {} içerisinideyse o objedir.
+//örneğin tarayıcıda consola window yazarsan {} içinde bir şeyler olduğunu görürsün işte o yüzden bunlar object idir
+//şimdi window ile ilgili bir kaç işlem yapalım
+// let val ;
+// var a = 10;//let yazarsan window içinde çıkmıyor ama var yazınca çıkıyo😯😳
+// function abc() {  }
+// val = window;
+// console.log(val);//bir tane window var zaten onu çağırıyor. consola window yazmakla  aynı
+// alert("hello world")
+// var b = prompt("sayı giriniz")
+// alert(b)
+
+//kullanıcıdan alınan bilgiye göre işlem yapılabilir
+//CONFIRM ile "confirm" bu işlem gerçekleştirilir
+// let val = confirm("are you sure, emin misin kardeş?")
+// console.log(val);//true|false
+
+// //scroll barın değerlerini tarayıcıdan alabiliriz
+// let X = window.scrollX;
+// let Y = window.scrollY;
+// console.log(X+"  ve "+Y);
+// console.log(`x değeri ${(X>20?"20den büyük":"20den kucuk")} ve Y değeri ${Y<20?"20den kucuk":"20den buyuk"}`);
+// //not: window.scrollX yazmamıza gerek yoktur.scrollX yazsakta window objesi bizim yerimeize algılayacaktır
+
+//window verebilir: locatin bilgileri (http, www, port, pathname(/danetc))alınabilir
+// let val = window.location
+// console.log(val);
+// host: "127.0.0.1:5501"
+// hostname: "127.0.0.1"
+// href: "http://127.0.0.1:5501/"
+// origin: "http://127.0.0.1:5501"
+// pathname: "/"
+// port: "5501"
+// protocol: "http:"
+//Not:
+// http://127.0.0.1:5501/?ad=engin&yas=4343
+// window.location.search
+// "?ad=enginb&yas=4343"
+
+//Not:window . location . href ile internetti başka sayfalara yönlenilebilir.
+// window.location.href = "https://www.google.com"
+
+//Not: window . location . reload () ile sayfa tekrar yüklenebilir
+// window.location.reload()
+
+//not : window. navigator ile clientin bilgilerine ulaşılabilir
+// console.log(window.navigator);
+// console.log(window.navigator.userAgent);
+
+//if in içindeki i değeri var olduğundan scop oluşturmaz. var i 522 dediğimizde globaldeki i ye değerimizi atar. let yazsaydık tanımlanan i 1 olacaktı
+//not: var ifadesi kullanılıp sonra tanımlanabilir
+var i = 1;
+let j = 9;
+
+if(true) {
+    var i =  522;
+    let j =  522;
+    console.log("ife girdi");
 }
 
+console.log(i);
+console.log(j);
 
+//not: vs studioda if in aşapısında çağırdığımız değerler if içindeki i harfini parlak j harfini sönük yaptı. böylece if içindeki j ye dışarıdan erişemediğini anlayabilirsin
 
+//if while vb. yapılarda sıkıntı oluşmamakta. bilinmesi gereken şey fonkyonlar kendi scoplarını oluşturur. o yüzden fonksyon içinde let tanımı gibi davranır
+// var b =20;
 
+// function sut() {  
+//     var b = 44;//çıkışta sonlanır çünkü fonksyonlar=kendi skopu var
+//     console.log("func calisti");
+// }
+// sut();
 
+// console.log(b);
 
-
-
-
-
-
-
-
-
-
+//not : let  ve const es6 (egmascript 2015) ile gelen scopelardır. normal programlama dilleri kullanımları gibidir. let kullan kafan rahat olsun
