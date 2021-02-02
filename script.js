@@ -640,17 +640,17 @@
 
 //if in içindeki i değeri var olduğundan scop oluşturmaz. var i 522 dediğimizde globaldeki i ye değerimizi atar. let yazsaydık tanımlanan i 1 olacaktı
 //not: var ifadesi kullanılıp sonra tanımlanabilir
-var i = 1;
-let j = 9;
+// var i = 1;
+// let j = 9;
 
-if(true) {
-    var i =  522;
-    let j =  522;
-    console.log("ife girdi");
-}
+// if(true) {
+//     var i =  522;
+//     let j =  522;
+//     console.log("ife girdi");
+// }
 
-console.log(i);
-console.log(j);
+// console.log(i);
+// console.log(j);
 
 //not: vs studioda if in aşapısında çağırdığımız değerler if içindeki i harfini parlak j harfini sönük yaptı. böylece if içindeki j ye dışarıdan erişemediğini anlayabilirsin
 
@@ -666,3 +666,23 @@ console.log(j);
 // console.log(b);
 
 //not : let  ve const es6 (egmascript 2015) ile gelen scopelardır. normal programlama dilleri kullanımları gibidir. let kullan kafan rahat olsun
+//******************************DOM******************************** */
+//2.02.2021
+// let val = document.body //body etiketini ver
+// val = document.all //tüm etiketler
+// val = document.all.length //tüm etiketlerin sayısı(zaten dizi)
+// val = document.anchors
+// val = document.URL
+// val = document.domain
+// val = document.image //sayfadaki tüm imajlar
+// val = document.scripts
+// val = document.forms
+// console.log(val);
+
+//Single elements:
+let header = document.getElementById("example");
+header = header.innerText="hello world"//ilementin içindeki yazı
+header = header.innerHTML="<b>how are you</b>"//ilementin içindeki html
+header.style.color = 'red';
+console.log(header);
+//Multiple elements:
