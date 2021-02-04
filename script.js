@@ -685,4 +685,4 @@ header = header.innerText="hello world"//ilementin içindeki yazı
 header = header.innerHTML="<b>how are you</b>"//ilementin içindeki html
 
 console.log(header);
-//Multiple elements: s
+//Multiple elements: sds
