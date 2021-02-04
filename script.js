@@ -683,6 +683,6 @@
 let header = document.getElementById("example");
 header = header.innerText="hello world"//ilementin içindeki yazı
 header = header.innerHTML="<b>how are you</b>"//ilementin içindeki html
-header.style.color = 'red';
+
 console.log(header);
-//Multiple elements:
+//Multiple elements: s
