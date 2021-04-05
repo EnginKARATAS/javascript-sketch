@@ -385,18 +385,18 @@
 //eğer return true yazarsan 1999 gelir
 //--
 //find yerine filter kullanılırsa bu sefer true olduğunda saymayı bırakmaz. dizinin tüm elemanlarını saymaya devam eder
-let arr = [1999,1997,2000,2002,2003];
+// let arr = [1999,1997,2000,2002,2003];
 
-function getir(year) {
-    let yas = 2021-year
-    return yas<21
-}
+// function getir(year) {
+//     let yas = 2021-year
+//     return yas<21
+// }
 
-let val = arr.find(getir)
-console.log(val);
-let filterval = arr.filter(getir)
-console.log("filtreden gelen:");
-console.log(filterval);
+// let val = arr.find(getir)
+// console.log(val);
+// let filterval = arr.filter(getir)
+// console.log("filtreden gelen:");
+// console.log(filterval);
 //----------------------------------------------------------------
 
 //*********************
@@ -687,3 +687,16 @@ console.log(filterval);
 
 // console.log(header);
 //Multiple elements: sds
+//******************************** */
+//******************************** */
+
+//5.04.2021
+let str = "strassignmentyapilamaz, stringler Immutable dir.";
+//arraya çevir çünkü stringler IMMITABLE DIR = değişmez sabit only get
+let arrstr = str.split("");
+arrstr[2] = "Q";
+//join parametresi içine yazılan değer tüm array elemanlarının sağına bir ifade koyarak stringe çevirir. örneğin "x" için ve str = selam için sxexlxaxmx
+//stringe çevir
+str = arrstr.join("");
+alert(str);
+//******************************** */
