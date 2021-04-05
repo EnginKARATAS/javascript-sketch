@@ -385,17 +385,18 @@
 //eğer return true yazarsan 1999 gelir
 //--
 //find yerine filter kullanılırsa bu sefer true olduğunda saymayı bırakmaz. dizinin tüm elemanlarını saymaya devam eder
-// let arr = [1999,1997,2000,2002,2003];
+let arr = [1999,1997,2000,2002,2003];
 
-// function getir(year) {
-//     let yas = 2021-year
-//     return yas<21
-// }
+function getir(year) {
+    let yas = 2021-year
+    return yas<21
+}
 
-// let val = arr.find(getir)
-// console.log(val);
-// let filterval = arr.filter(getir)
-// console.log(filterval);
+let val = arr.find(getir)
+console.log(val);
+let filterval = arr.filter(getir)
+console.log("filtreden gelen:");
+console.log(filterval);
 //----------------------------------------------------------------
 
 //*********************
@@ -680,9 +681,9 @@
 // console.log(val);
 
 //Single elements:
-let header = document.getElementById("example");
-header = header.innerText="hello world"//ilementin içindeki yazı
-header = header.innerHTML="<b>how are you</b>"//ilementin içindeki html
+// let header = document.getElementById("example");
+// header = header.innerText="hello world"//ilementin içindeki yazı
+// header = header.innerHTML="<b>how are you</b>"//ilementin içindeki html
 
-console.log(header);
+// console.log(header);
 //Multiple elements: sds
