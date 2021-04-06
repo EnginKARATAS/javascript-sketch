@@ -691,12 +691,19 @@
 //******************************** */
 
 //5.04.2021
-let str = "strassignmentyapilamaz, stringler Immutable dir.";
-//arraya çevir çünkü stringler IMMITABLE DIR = değişmez sabit only get
-let arrstr = str.split("");
-arrstr[2] = "Q";
-//join parametresi içine yazılan değer tüm array elemanlarının sağına bir ifade koyarak stringe çevirir. örneğin "x" için ve str = selam için sxexlxaxmx
-//stringe çevir
-str = arrstr.join("");
+// let str = "strassignmentyapilamaz, stringler Immutable dir.";
+// //arraya çevir çünkü stringler IMMITABLE DIR = değişmez sabit only get
+// let arrstr = str.split("");
+// arrstr[2] = "Q";
+// //join parametresi içine yazılan değer tüm array elemanlarının sağına bir ifade koyarak stringe çevirir. örneğin "x" için ve str = selam için sxexlxaxmx
+// //stringe çevir
+// str = arrstr.join("");
+// alert(str);
+//******************************** */
+String.prototype.replaceAt = function(index, char){
+    return this.replace(new RegExp(`^(.{${ index }})(.)`), `$1${ char }`);
+}
+str = "sa"
+str = str.replaceAt(0,"Q") //sas
 alert(str);
 //******************************** */
