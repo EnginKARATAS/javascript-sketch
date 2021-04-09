@@ -663,7 +663,6 @@
 //     console.log("func calisti");
 // }
 // sut();
-
 // console.log(b);
 
 //not : let  ve const es6 (egmascript 2015) ile gelen scopelardır. normal programlama dilleri kullanımları gibidir. let kullan kafan rahat olsun
