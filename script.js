@@ -80,7 +80,6 @@
 
 // val2 = String(new Date().getFullYear());
 
-
 // console.log(typeof total);
 // console.log(num1+num2);
 // console.log('********');
@@ -134,9 +133,7 @@
 // val = (a >= b) && (b === a);
 // val = (true) || (false);
 
-
 // console.log(val);
-
 
 // let kgEngin = 80;
 // let cmEngin = 1.80;
@@ -169,7 +166,6 @@
 // d2.setDate(20);
 // console.log(d2);
 
-
 // let d = new Date();
 
 // d.setFullYear(2008);
@@ -178,7 +174,6 @@
 // d.setHours(11);
 // d.setMinutes(5);
 // d.setSeconds(0);
-
 
 // console.log("yıl:"+d.getFullYear());
 // console.log("ay:"+d.getMonth());
@@ -209,14 +204,11 @@
 // let ay = yil*12;
 // ay.
 
-
-
 // console.log('saniye farkı:'+saniye);
 // console.log('saat farkı:'+aralarindakiSaat);
 // console.log('ay farkı:'+ay);
 // console.log('gun farkı:'+gun);
 // console.log('dakika farkı:'+dakika);
-
 
 // let ageDate = new Date(ageDifMs);
 // console.log(ageDate.getFullYear()-1970);
@@ -348,8 +340,6 @@
 //                 // .replace("ö","o") //bunu dersek sadece ilk gördüğü ö yı çevirir. Hepsi için:
 // )
 
-
-
 // console.log(val);
 // console.l og(typeof val);
 
@@ -422,7 +412,6 @@
 
 // let countsOfMyPick = myDearArray.filter(x => x > 50);
 
-
 //***-->
 
 //find the an object.property equal to given string
@@ -435,7 +424,6 @@
 //or
 
 // let pickOnCountry = myDearArray2.filter(gelenObje => gelenObje.il === "Kocaeli");
-
 
 /***-->
 //************XXXXXXXXXXX********************* */
@@ -480,7 +468,7 @@
 //         console.log('04410230441');
 //         break;
 //     case 'bilgisayar':
-//         console.log('ofcourse'); 
+//         console.log('ofcourse');
 //         break;
 //     case 'savas':
 //         console.log("here is your ak-49");
@@ -543,9 +531,8 @@
 
 // let bakimYil = tarihYilSimdi - tirafigeCikisTarihi.getFullYear();
 
-
 // switch(bakimYil){
-//     case 3: 
+//     case 3:
 //         console.log(`eh sende 3 yıl olmuş bakım yaptır artık`);
 //         break;
 //     case 2:
@@ -699,13 +686,38 @@
 // str = arrstr.join("");
 // alert(str);
 //******************************** */
-String.prototype.replaceAt = function(index, char){
-    return this.replace(new RegExp(`^(.{${ index }})(.)`), `$1${ char }`);
-}
-str = "sa"
-str = str.replaceAt(0,"Q") //sas
+String.prototype.replaceAt = function (index, char) {
+  return this.replace(new RegExp(`^(.{${index}})(.)`), `$1${char}`);
+};
+str = "sa";
+str = str.replaceAt(0, "Q"); //sas
 alert(str);
 //******************************** */
 //******************************** */
 //******************************** */
-//******************************** */
+//************10.04.2021 ***************** */
+var str = document.getElementById("demo").innerHTML;
+var txt = str.replace("Microsoft", "W3Schools"); //firs Microsoft element!
+
+function myFunction() {
+  var str = "abcdef";
+  var arr = str.split("");
+  arr = arr.join("");
+  document.getElementById("demo").innerHTML = arr; //abcdef
+  arr = arr.join("x");
+  document.getElementById("demo").innerHTML = arr; //axbxcxdxexfx
+}
+
+//<p>Extra large or extra small numbers can be written with scientific (exponent) notation:</p>
+var x = 123e5;
+var y = 123e-5;
+
+
+{/* <p>Integers (numbers without a period or exponent notation) are accurate up to 15 digits:</p> */ }
+
+var x = 999999999999999;
+var y = 9999999999999999;
+
+{/* <p>Floating point arithmetic is not always 100% accurate.</p> */ }
+
+
