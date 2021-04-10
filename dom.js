@@ -169,7 +169,11 @@ document.getElementById("demo").innerHTML = x + y;
 var x = NaN;
 document.getElementById("demo").innerHTML = typeof x;
 
-<p>Infinity is returned if you calculate a number outside the largest possible number:</p>
+<p>Infinity is returned if you calculate a number outside the largest possible number:
+Infinity type = number
+2/0 //infinity
+-2/0 //-infinity
+</p>
 
 /*
 4
@@ -191,3 +195,33 @@ while (myNumber != Infinity) {
    txt = txt + myNumber + "<br>";
 }
 document.getElementById("demo").innerHTML = txt;
+
+<p>Never create numbers as objects.JavaScript objects cannot be compared.</p>
+var x = new Number(500);  // x is an object
+var y = new Number(500);  // y is an object
+document.getElementById("demo").innerHTML = (x==y);
+
+<p>A number can be an object, but there is no need to create a number as an object.</p>
+var x = 123; //number
+var y = new Number(123);//object
+document.getElementById("demo").innerHTML = typeof x + "<br>" + typeof y;
+
+<p>The toString() method can output numbers from base 2 to 36:</p>
+/*
+32 =
+Decimal 32
+Hexadecimal 20
+Octal 40
+Binary 100000
+*/
+var myNumber = 32;
+document.getElementById("demo").innerHTML =
+"32 = " + "<br>" + 
+" Decimal " + myNumber.toString(10) + "<br>" +
+" Hexadecimal " + myNumber.toString(16) + "<br>" +
+" Octal " + myNumber.toString(8) + "<br>" +
+" Binary " + myNumber.toString(2);
+
+<p>Numeric constants, preceded by 0x, are interpreted as hexadecimal:</p>
+var x = 0xFF;
+document.getElementById("demo").innerHTML = "0xFF = " + x; //output: 0xFF = 255
