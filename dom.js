@@ -225,3 +225,7 @@ document.getElementById("demo").innerHTML =
 <p>Numeric constants, preceded by 0x, are interpreted as hexadecimal:</p>
 var x = 0xFF;
 document.getElementById("demo").innerHTML = "0xFF = " + x; //output: 0xFF = 255
+
+<p><input id="f" onkeyup="convert('F')"> degrees Fahrenheit</p> 
+
+//work number array sorting 
