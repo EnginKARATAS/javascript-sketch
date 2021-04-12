@@ -695,29 +695,3 @@ alert(str);
 //******************************** */
 //******************************** */
 //******************************** */
-//************10.04.2021 ***************** */
-var str = document.getElementById("demo").innerHTML;
-var txt = str.replace("Microsoft", "W3Schools"); //firs Microsoft element!
-
-function myFunction() {
-  var str = "abcdef";
-  var arr = str.split("");
-  arr = arr.join("");
-  document.getElementById("demo").innerHTML = arr; //abcdef
-  arr = arr.join("x");
-  document.getElementById("demo").innerHTML = arr; //axbxcxdxexfx
-}
-
-//<p>Extra large or extra small numbers can be written with scientific (exponent) notation:</p>
-var x = 123e5;
-var y = 123e-5;
-
-
-{/* <p>Integers (numbers without a period or exponent notation) are accurate up to 15 digits:</p> */ }
-
-var x = 999999999999999;
-var y = 9999999999999999;
-
-{/* <p>Floating point arithmetic is not always 100% accurate.</p> */ }
-
-
