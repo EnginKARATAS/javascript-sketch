@@ -695,3 +695,11 @@ alert(str);
 //******************************** */
 //******************************** */
 //******************************** */
+
+//Math.round(x) returns the value of x rounded to its nearest integer:
+
+
+<p>The new ECMASCRIPT 5 method isArray returns true when used on an array:
+</p>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = Array.isArray(fruits);

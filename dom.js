@@ -229,3 +229,14 @@ document.getElementById("demo").innerHTML = "0xFF = " + x; //output: 0xFF = 255
 <p><input id="f" onkeyup="convert('F')"> degrees Fahrenheit</p> 
 
 //work number array sorting 
+
+//</p>
+
+
+// the lowest number in array return instanly
+
+function myArrayMin(arr) {
+  return Math.min.apply(null, arr); // arraydaki en küçük değeri return eder
+  // return Math.max.apply(null, arr); // arraydaki en büyük değeri return eder
+
+}
