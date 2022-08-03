@@ -84,10 +84,20 @@ let multipy2 = num1 => num2 => { return num1*num2 };
 //This is my solituon, pushing the old array and not going to create new array
 //bad application
 const oldArr = [1,2,3]
-const getArrayLastElement = (arr, element)=>{
+const  append1 = (arr, element)=>{
     arr.push(element)
-    return arr
+    return arr 
 }
 
-console.log(getArrayLastElement(oldArr,4))
+console.log(oldArr)
+console.log(append1(oldArr,4))
+
+//better way, not changing an actual array
+const append2 = (arr, element)=>{
+    return [...arr, element]
+}
+const newNumbers = append2(oldArr, 5)
+console.log(oldArr)
+console.log(append2(oldArr,4))
+
 
