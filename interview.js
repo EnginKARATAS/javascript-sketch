@@ -174,3 +174,12 @@ let isExsistWithReduce = (arr) => {
 console.log(isExsistWithReduce(numss));
 
 
+//
+//Sort the array of numbers  
+//
+
+//sol1
+console.log([5,2,3,8,5,4].sort((a,b)=>a>b?1:-1))
+//sol2 //a-b <0 b is bigger switch else not switch. otomatic way.
+console.log([5,2,3,8,5,4].sort((a,b)=>a-b))
+
