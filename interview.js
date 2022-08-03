@@ -101,9 +101,76 @@ const newNumbers = append2(oldArr, 5);
 
 //write a func which can concatenate 2 arrays
 const concatenateArrays = (arr1, arr2) => {
-//   arr1.concat(...arr2); //other way
+  //   arr1.concat(...arr2); //other way
   return [...arr1, ...arr2]; //modern way
 };
 
 const newArr = concatenateArrays([1, 2, 3], [4, 5, 6]);
-console.log(newArr);
+// console.log(newArr);
+
+//
+//Check that user with such name exists in array of objects
+//
+
+//rubish
+let isSameNameInArray = (name, users) => {
+  let exsists = false;
+  for (let i = 0; i < users.length; i++) {
+    if (users[i].name === name) {
+      exsists = true;
+    }
+  }
+  return exsists;
+};
+// console.log(isSameNameInArray("engin", users));
+
+//js solution 1 // one line solution
+let checkNameExsists = (name, arr) => arr.some((el) => el.name === name);
+// console.log(checkNameExsists("engin", users));
+
+//js solution 2 find
+let checkNameExsists2 = (name, arr) => {
+  let isExsistsObj = arr.find((el) => el.name === name);
+  return Boolean(isExsistsObj);
+};
+// console.log(checkNameExsists2("engin", users));
+
+//js solition 3 findIndex
+let checkNameExsists4 = (name, arr) => {
+  let index = arr.findIndex((el) => el.name === name);
+  return index > 0;
+};
+// console.log(checkNameExsists4("engin", users));
+
+//
+//remove all duplicates in the array
+//
+
+//solution 1 Set
+let removeDuplicates = (arr) => {
+  return [...new Set(arr)];
+};
+
+console.log(removeDuplicates([1, 2, 3, 3]));
+
+//solution 2 includes an array
+let existingDuplicates2 = (arr) => {
+  let includingNumbersArr = [];
+  arr.forEach((el) => {
+    if (!includingNumbersArr.includes(el)) includingNumbersArr.push(el);
+  });
+  return includingNumbersArr;
+};
+console.log(existingDuplicates2([1, 2, 3, 3]));
+
+//solution 3 with reduce
+let numss = [1, 2, 3, 3];
+
+let isExsistWithReduce = (arr) => {
+  accar = arr.reduce((acc, el) => {
+    return acc.includes(el) ? acc : [...acc, el];
+  }, []);
+};
+console.log(isExsistWithReduce(numss));
+
+
