@@ -223,3 +223,24 @@ const range2 = (start, end)=>{
 }
 
 console.log(range2(2,10))
+
+
+//
+// Write a function which implements shuffle
+//
+
+//my solituon
+const shuffleArr = [1,2,3,4,5,6]
+const shuffle = (arr)=>{
+    return arr.sort((a,b)=>a*Math.floor(Math.random(1,100)*10)-b*Math.floor(Math.random(1,100)*10))
+}
+
+console.log(shuffle(shuffleArr))
+
+//clean better solition
+
+const shuffle2 = (arr)=>{
+    return arr.map(el => ({rand: Math.random(), value: el})).sort((a,b)=>a.rand-b.rand).map(el=>el.value)
+}
+
+console.log(shuffle2([1,2,3,4,5]))
