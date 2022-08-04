@@ -50,6 +50,19 @@ fetch("https://api.github.com/users/enginkaratas/repos")
   .then((res) => res.json())
   .then((data) => {
     console.log(data);
-  }).catch(err => {
-    console.log(err)
+  })
+  .catch((err) => {
+    console.log(err);
   });
+
+//
+// Write an asynchronous function which executes callback after finishing it`s asynchronus task
+//
+
+const asyncFn = (callback) => {
+  setTimeout(callback("done"), 2000);
+};
+
+asyncFn((message) => {
+  console.log("callback " + message);
+});
