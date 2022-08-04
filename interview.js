@@ -206,41 +206,70 @@ console.log(books);
 
 //low level solition
 let range = (start, end) => {
-    let result = [];
-    if (start>0 && start<100 && start < end && end<1000 ) {
-        for(let i = start ; i<end ; i++){
-            result.push(i)
-        }
-        return result
+  let result = [];
+  if (start > 0 && start < 100 && start < end && end < 1000) {
+    for (let i = start; i < end; i++) {
+      result.push(i);
     }
-
+    return result;
+  }
 };
-console.log(range(1,20))
+console.log(range(1, 20));
 
 //js solution
-const range2 = (start, end)=>{
-    return [...Array(end-1).keys()].map(el=>el+start)
-}
+const range2 = (start, end) => {
+  return [...Array(end - 1).keys()].map((el) => el + start);
+};
 
-console.log(range2(2,10))
-
+console.log(range2(2, 10));
 
 //
 // Write a function which implements shuffle
 //
 
 //my solituon
-const shuffleArr = [1,2,3,4,5,6]
-const shuffle = (arr)=>{
-    return arr.sort((a,b)=>a*Math.floor(Math.random(1,100)*10)-b*Math.floor(Math.random(1,100)*10))
-}
+const shuffleArr = [1, 2, 3, 4, 5, 6];
+const shuffle = (arr) => {
+  return arr.sort(
+    (a, b) =>
+      a * Math.floor(Math.random(1, 100) * 10) -
+      b * Math.floor(Math.random(1, 100) * 10)
+  );
+};
 
-console.log(shuffle(shuffleArr))
+console.log(shuffle(shuffleArr));
 
 //clean better solition
+const shuffle2 = (arr) => {
+  return arr
+    .map((el) => ({ rand: Math.random(), value: el }))
+    .sort((a, b) => a.rand - b.rand)
+    .map((el) => el.value);
+};
 
-const shuffle2 = (arr)=>{
-    return arr.map(el => ({rand: Math.random(), value: el})).sort((a,b)=>a.rand-b.rand).map(el=>el.value)
-}
+console.log(shuffle2([1, 2, 3, 4, 5]));
 
-console.log(shuffle2([1,2,3,4,5]))
+//
+// Find the number of occurences of minimum value in the list
+//
+
+//my solution
+let countRepeatMinValue = (arr) => {
+  let minVal = arr.sort((a, b) => a - b)[0];
+  let i = 0;
+  arr.forEach((index) => {
+    if (index == minVal) {
+      i += 1;
+    }
+  });
+  return i;
+};
+
+console.log(countRepeatMinValue([6,5,4,7,4,4,4,8,4,4,4]))
+
+//sol2
+const arr4 = [6,5,4,7,4,4,4,8,4,4,4]
+const minVal = Math.min(...arr4)
+const countOfMin = arr4.filter(el=>el===minVal).length
+
+console.log(countOfMin)
