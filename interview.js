@@ -151,7 +151,7 @@ let removeDuplicates = (arr) => {
   return [...new Set(arr)];
 };
 
-console.log(removeDuplicates([1, 2, 3, 3]));
+// console.log(removeDuplicates([1, 2, 3, 3]));
 
 //solution 2 includes an array
 let existingDuplicates2 = (arr) => {
@@ -161,26 +161,26 @@ let existingDuplicates2 = (arr) => {
   });
   return includingNumbersArr;
 };
-console.log(existingDuplicates2([1, 2, 3, 3]));
+// console.log(existingDuplicates2([1, 2, 3, 3]));
 
 //solution 3 with reduce
 let numss = [1, 2, 3, 3];
 
 let isExsistWithReduce = (arr) => {
-  accar = arr.reduce((acc, el) => {
+   arr.reduce((acc, el) => {
     return acc.includes(el) ? acc : [...acc, el];
   }, []);
 };
-console.log(isExsistWithReduce(numss));
+// console.log(isExsistWithReduce(numss));
 
 //
 //Sort the array of numbers
 //
 
 //sol1
-console.log([5, 2, 3, 8, 5, 4].sort((a, b) => (a > b ? 1 : -1)));
+// console.log([5, 2, 3, 8, 5, 4].sort((a, b) => (a > b ? 1 : -1)));
 //sol2 //a-b <0 b is bigger switch else not switch. otomatic way.
-console.log([5, 2, 3, 8, 5, 4].sort((a, b) => a - b));
+// console.log([5, 2, 3, 8, 5, 4].sort((a, b) => a - b));
 
 //
 //Sort the array of object by auyhor`s last name
@@ -198,7 +198,7 @@ books.sort((book1, book2) => {
   return authorLastName1 < authorLastName2 ? -1 : 1;
 });
 
-console.log(books);
+// console.log(books);
 
 //
 //Write a function which implement range
@@ -214,14 +214,14 @@ let range = (start, end) => {
     return result;
   }
 };
-console.log(range(1, 20));
+// console.log(range(1, 20));
 
 //js solution
 const range2 = (start, end) => {
   return [...Array(end - 1).keys()].map((el) => el + start);
 };
 
-console.log(range2(2, 10));
+// console.log(range2(2, 10));
 
 //
 // Write a function which implements shuffle
@@ -237,7 +237,7 @@ const shuffle = (arr) => {
   );
 };
 
-console.log(shuffle(shuffleArr));
+// console.log(shuffle(shuffleArr));
 
 //clean better solition
 const shuffle2 = (arr) => {
@@ -247,7 +247,7 @@ const shuffle2 = (arr) => {
     .map((el) => el.value);
 };
 
-console.log(shuffle2([1, 2, 3, 4, 5]));
+// console.log(shuffle2([1, 2, 3, 4, 5]));
 
 //
 // Find the number of occurences of minimum value in the list
@@ -265,14 +265,14 @@ let countRepeatMinValue = (arr) => {
   return i;
 };
 
-console.log(countRepeatMinValue([6, 5, 4, 7, 4, 4, 4, 8, 4, 4, 4]));
+// console.log(countRepeatMinValue([6, 5, 4, 7, 4, 4, 4, 8, 4, 4, 4]));
 
 //sol2
 const arr4 = [6, 5, 4, 7, 4, 4, 4, 8, 4, 4, 4];
 const minVal = Math.min(...arr4);
 const countOfMin = arr4.filter((el) => el === minVal).length;
 
-console.log(countOfMin);
+// console.log(countOfMin);
 
 //
 //Design a class for employee which takes id and name in during construction of object and has a salary property
@@ -299,22 +299,49 @@ class Employee {
   }
 }
 
-class Manager extends Employee{
-    setDepartment(name){
-        this.departmentName = name;
-    }
-    getDepartment(){
-        return this.departmentName;
-    }
+class Manager extends Employee {
+  setDepartment(name) {
+    this.departmentName = name;
+  }
+  getDepartment() {
+    return this.departmentName;
+  }
 }
 
-const employee = new Employee(1,"adam foo");
-console.log(employee.getName())
-const manager = new Manager(2,"mehmet foo")
-manager.setDepartment("IT")
-console.log(manager.getDepartment())
-
+const employee = new Employee(1, "adam foo");
+// console.log(employee.getName());
+const manager = new Manager(2, "mehmet foo");
+manager.setDepartment("IT");
+// console.log(manager.getDepartment());
 
 //
 //Design a class like on the top but with prototypes(functions)
 //
+var Employee2 = function (id, name) {
+  if (!id || !name) {
+    throw new Error("Employee id and name are mandatory");
+  }
+  this.id = id;
+  this.name = name;
+
+  Employee.prototype.setSalary = function(salary) {
+    this.salary = salary;
+  }
+
+  Employee.prototype.getId = function() {
+    return this.id;
+  }
+
+  Employee.prototype.getName = function(){
+    return this.name
+  }
+
+};
+const employee2 = new Employee(1, "adam foo");
+// console.log(employee2.getName())
+
+import nameEn, {getName, getSurname} from "./interview_module.js"
+
+console.log(nameEn() + getName(), getSurname())
+
+
