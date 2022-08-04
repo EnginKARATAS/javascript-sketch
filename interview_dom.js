@@ -58,7 +58,8 @@ fetch("https://api.github.com/users/enginkaratas/repos")
 //
 // Write an asynchronous function which executes callback after finishing it`s asynchronus task
 //
-
+//callback function
+//callback functions doesnt using much after promises includes to js by default
 const asyncFn = (callback) => {
   setTimeout(callback("done"), 2000);
 };
@@ -66,3 +67,4 @@ const asyncFn = (callback) => {
 asyncFn((message) => {
   console.log("callback " + message);
 });
+
