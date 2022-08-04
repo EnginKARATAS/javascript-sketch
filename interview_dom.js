@@ -8,3 +8,12 @@ paragraph.innerHTML = paragraph.innerHTML
   .map((item) =>
     item.length > 8 ? `<span style="background:yellow">${item}</span>` : item
   ).join(" ");
+
+
+//Add a link bact to the source of the text after the paragraph tag.
+const link = document.createElement('a')
+link.href = "www.google.com"
+const linkP = document.createElement('p')
+linkP.innerHTML = "lorem ipsum click"
+link.append(linkP)
+document.body.append(link)
