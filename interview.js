@@ -173,32 +173,53 @@ let isExsistWithReduce = (arr) => {
 };
 console.log(isExsistWithReduce(numss));
 
-
 //
-//Sort the array of numbers  
+//Sort the array of numbers
 //
 
 //sol1
-console.log([5,2,3,8,5,4].sort((a,b)=>a>b?1:-1))
+console.log([5, 2, 3, 8, 5, 4].sort((a, b) => (a > b ? 1 : -1)));
 //sol2 //a-b <0 b is bigger switch else not switch. otomatic way.
-console.log([5,2,3,8,5,4].sort((a,b)=>a-b))
-
+console.log([5, 2, 3, 8, 5, 4].sort((a, b) => a - b));
 
 //
 //Sort the array of object by auyhor`s last name
 //
 
 const books = [
-    {name: "Harry Potter", author: "Joanne Bwling"},
-    {name: "Warcross", author: "Marie Cu"},
-    {name: "The Hunger Games", author: "Suzanne Aollins"}
-]
+  { name: "Harry Potter", author: "Joanne Bwling" },
+  { name: "Warcross", author: "Marie Cu" },
+  { name: "The Hunger Games", author: "Suzanne Aollins" },
+];
 
-books.sort((book1, book2)=>{
-    const authorLastName1 = book1.author.split(" ")[1]
-    const authorLastName2 = book2.author.split(" ")[1]
-    return authorLastName1 < authorLastName2?-1:1;
-})
+books.sort((book1, book2) => {
+  const authorLastName1 = book1.author.split(" ")[1];
+  const authorLastName2 = book2.author.split(" ")[1];
+  return authorLastName1 < authorLastName2 ? -1 : 1;
+});
 
-console.log(books)
+console.log(books);
 
+//
+//Write a function which implement range
+//
+
+//low level solition
+let range = (start, end) => {
+    let result = [];
+    if (start>0 && start<100 && start < end && end<1000 ) {
+        for(let i = start ; i<end ; i++){
+            result.push(i)
+        }
+        return result
+    }
+
+};
+console.log(range(1,20))
+
+//js solution
+const range2 = (start, end)=>{
+    return [...Array(end-1).keys()].map(el=>el+start)
+}
+
+console.log(range2(2,10))
