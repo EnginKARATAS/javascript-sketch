@@ -340,8 +340,19 @@ var Employee2 = function (id, name) {
 const employee2 = new Employee(1, "adam foo");
 // console.log(employee2.getName())
 
-import nameEn, {getName, getSurname} from "./interview_module.js"
+//ES6 MODULE
+// import nameEn, {getName, getSurname} from "./interview_module.js"
 
-console.log(nameEn() + getName(), getSurname())
+// console.log(nameEn() + getName(), getSurname())
+
+//commonJS Module
+// const getFullName = require("./common.js");
+// console.log(getFullName("lorem ipsum"))
 
 
+//
+//Create debounce function
+let worknowfunc = ()=>{
+    console.log("first")
+}
+setTimeout(worknowfunc,1000)
