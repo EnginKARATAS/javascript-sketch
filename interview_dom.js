@@ -21,3 +21,14 @@ link.append(linkP);
 //Split each new sentence to a separate line in the paragraph text. A sentence text could terminated with a period
 const parag = document.querySelector("p");
 parag.innerHTML = parag.innerHTML.split(".").join(".</p><p>") + "</p>";
+
+
+//
+// Implement a click on todo item as fast as possible
+//
+let items = document.querySelectorAll("li")
+items.forEach(item=>{
+    item.addEventListener("click", () => {
+        console.log("you clicke on item: " + item.innerText)
+    })
+})
