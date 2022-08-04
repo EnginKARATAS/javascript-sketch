@@ -265,11 +265,56 @@ let countRepeatMinValue = (arr) => {
   return i;
 };
 
-console.log(countRepeatMinValue([6,5,4,7,4,4,4,8,4,4,4]))
+console.log(countRepeatMinValue([6, 5, 4, 7, 4, 4, 4, 8, 4, 4, 4]));
 
 //sol2
-const arr4 = [6,5,4,7,4,4,4,8,4,4,4]
-const minVal = Math.min(...arr4)
-const countOfMin = arr4.filter(el=>el===minVal).length
+const arr4 = [6, 5, 4, 7, 4, 4, 4, 8, 4, 4, 4];
+const minVal = Math.min(...arr4);
+const countOfMin = arr4.filter((el) => el === minVal).length;
 
-console.log(countOfMin)
+console.log(countOfMin);
+
+//
+//Design a class for employee which takes id and name in during construction of object and has a salary property
+//
+class Employee {
+  constructor(id, name) {
+    if (!id || !name) {
+      throw new Error("Employee id and name are mandatory");
+    }
+    this.id = id;
+    this.name = name;
+  }
+
+  setSalary(salary) {
+    this.salary = salary;
+  }
+
+  getId() {
+    return this.id;
+  }
+
+  getName() {
+    return this.name;
+  }
+}
+
+class Manager extends Employee{
+    setDepartment(name){
+        this.departmentName = name;
+    }
+    getDepartment(){
+        return this.departmentName;
+    }
+}
+
+const employee = new Employee(1,"adam foo");
+console.log(employee.getName())
+const manager = new Manager(2,"mehmet foo")
+manager.setDepartment("IT")
+console.log(manager.getDepartment())
+
+
+//
+//Design a class like on the top but with prototypes(functions)
+//
