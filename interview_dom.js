@@ -22,13 +22,23 @@ link.append(linkP);
 const parag = document.querySelector("p");
 parag.innerHTML = parag.innerHTML.split(".").join(".</p><p>") + "</p>";
 
-
 //
 // Implement a click on todo item as fast as possible
 //
-let items = document.querySelectorAll("li")
-items.forEach(item=>{
-    item.addEventListener("click", () => {
-        console.log("you clicke on item: " + item.innerText)
-    })
-})
+
+//bad performance if 1000
+// let items = document.querySelectorAll("li");
+// items.forEach((item) => {
+//   item.addEventListener("click", () => {
+//     console.log("you clicke on item: " + item.innerText);
+//   });
+// });
+
+//better performance create single listenner
+const app = document.querySelector(".todo-app");
+
+app.addEventListener("click", (e) => {
+  if (e.target && e.target.classList.contains("item")) {
+    console.log("you clicked on item: " + e.target.innerText);
+  }
+});
