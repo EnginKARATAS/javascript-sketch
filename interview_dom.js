@@ -42,3 +42,14 @@ app.addEventListener("click", (e) => {
     console.log("you clicked on item: " + e.target.innerText);
   }
 });
+
+//
+// Write an example of fetching data using fetch API
+//
+fetch("https://api.github.com/users/enginkaratas/repos")
+  .then((res) => res.json())
+  .then((data) => {
+    console.log(data);
+  }).catch(err => {
+    console.log(err)
+  });
