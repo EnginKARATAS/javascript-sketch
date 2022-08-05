@@ -27,21 +27,41 @@ let isPalindrome = (text) => {
 //
 const anagram = (str1, str2) => {
   if (str1.length !== str2.length) {
-    return false
+    return false;
   }
-  const str1Lower = str1.toLowerCase()
-  const str2Lower = str2.toLowerCase()
+  const str1Lower = str1.toLowerCase();
+  const str2Lower = str2.toLowerCase();
 
   if (str1Lower == str2Lower) {
-    return false
+    return false;
   }
 
-  const str1AlphabeticSort = str1Lower.split("").sort((a,b)=>a>b?1:-1).join("")
-  const str2AlphabeticSort = str2Lower.split("").sort((a,b)=>a>b?1:-1).join("")
+  const str1AlphabeticSort = str1Lower
+    .split("")
+    .sort((a, b) => (a > b ? 1 : -1))
+    .join("");
+  const str2AlphabeticSort = str2Lower
+    .split("")
+    .sort((a, b) => (a > b ? 1 : -1))
+    .join("");
   if (str1AlphabeticSort === str2AlphabeticSort) {
-    return true
+    return true;
   }
-  return false
-  
+  return false;
 };
-console.log(anagram("engin","engni"))
+console.log(anagram("engin", "engni"));
+
+const myPromise = new Promise((resolve, reject) => {
+  const connection = true;
+
+  if (connection) {
+    resolve("connection established");
+  }
+  reject("connection rejected");
+});
+
+myPromise
+  .then((message) => {
+    console.log(message);
+  })
+  .catch((message) => console.log(message));
