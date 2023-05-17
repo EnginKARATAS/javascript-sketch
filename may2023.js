@@ -15,6 +15,7 @@ const arr = [
     surname: "erten",
   },
 ];
+
 const narr = [];
 arr.forEach((item) => {
   narr.push(item);
@@ -31,8 +32,19 @@ a = 5
 var a;
 console.log(a)
 
-boya()
-function boya (){
-  console.log("ben bir baloncuğum, bubble to top" )
+//private func  
+function privateCounter(){
+    let counter = 0;
+
+    return{
+        getCounter(){
+            return counter;
+        },
+        increment: (val = s1)=>{
+            counter += val;
+        }        
+    }
 }
-boya()
+const counter = privateCounter()
+console.log(res)
+counter.setCounter();
