@@ -106,7 +106,7 @@ promisely
   });
 
 //
-//Even numbers with promise
+//Even numbers with promise 
 //
 const evenPromise = (arr) => {
   return new Promise((resolve, reject) => {
