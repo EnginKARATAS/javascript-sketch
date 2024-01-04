@@ -26,26 +26,56 @@ const names = users2
 console.log("after sort and other operations");
 console.log(names);
 
-
 //curry func
-function sum(a){
-  return function(b){
-    return function(c){
-      console.log(a+b+c)
-    }
-  }
+function sum(a) {
+  console.log("a");
+  return function (b) {
+    console.log("b");
+    return function (c) {
+    console.log("c");
+    console.log(a + b + c);
+    };
+  };
 }
 
+sum(1);
+console.log("----");
+
 //v2 curry func
-const sumV2 = num1 => num2 => num3 => console.log(num1+num2+num3);
+const sumV2 = (num1) => (num2) => (num3) => console.log(num1 + num2 + num3);
 
-
-// sum(1)(2)(3);
 const returnfunction = sum(1);
 const returnfunction2 = returnfunction(2);
 const returnfunction3 = returnfunction2(3);
 
 //
 
-sum(1)(2)(3);
+const sumFunc = sumV2(1);
+const actualsum = sumV2(2)(3);
+
 sumV2(1)(2);
+
+//curry but the user wont send function paramaters
+const curry = function (fn) {
+  var arity = fn.length;
+  console.log("the fn", fn, "and the length", arity);
+  return function f1(...args) {
+    if (args.length >= arity) {
+      console.log("enough arguments");
+      return fn(...args);
+    } else {
+      console.log("needs more args");
+      return function f2(...moreArgs){
+        var newArgs = args.concat(moreArgs)
+        return f1(...newArgs)
+      }
+    }
+  };
+};
+
+//the curry value is a function
+const curriedSum = curry(
+  (notThe, valueOkay, justArgs, oneMore) => notThe + valueOkay + justArgs + oneMore
+);
+
+curriedSum(1,2,(3,4),4)
