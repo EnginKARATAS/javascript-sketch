@@ -52,5 +52,3 @@ users
 // after sort array(mutated, changed, evolved)
 console.log("after sort array");
 console.log(users);
-
-

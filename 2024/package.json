@@ -1,0 +1,12 @@
+{
+  "name": "2024",
+  "version": "1.0.0",
+  "description": "",
+  "main": "2index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon 2index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
