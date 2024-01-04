@@ -32,8 +32,8 @@ function sum(a) {
   return function (b) {
     console.log("b");
     return function (c) {
-    console.log("c");
-    console.log(a + b + c);
+      console.log("c");
+      console.log(a + b + c);
     };
   };
 }
@@ -65,17 +65,25 @@ const curry = function (fn) {
       return fn(...args);
     } else {
       console.log("needs more args");
-      return function f2(...moreArgs){
-        var newArgs = args.concat(moreArgs)
-        return f1(...newArgs)
-      }
+      return function f2(...moreArgs) {
+        var newArgs = args.concat(moreArgs);
+        return f1(...newArgs);
+      };
     }
   };
 };
 
 //the curry value is a function
 const curriedSum = curry(
-  (notThe, valueOkay, justArgs, oneMore) => notThe + valueOkay + justArgs + oneMore
+  (notThe, valueOkay, justArgs, oneMore) =>
+    notThe + valueOkay + justArgs + oneMore
 );
+//(3,4) is just a one arg.
+curriedSum(1, 2, (3, 4), 4);
 
-curriedSum(1,2,(3,4),4)
+//curry stricted to send two parameter
+const get = curry((property, object) => object[property]);
+const getId = get("id");
+
+const map = curry((fn, arr) => arr.map(fn));
+const getIds = map(getId);
