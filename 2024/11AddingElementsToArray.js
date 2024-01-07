@@ -7,7 +7,7 @@ console.log("🚀 ~ file: 11AddingElementsToArray.js:6 ~ arr:", arr)
 append(arr, 3)
 console.log("🚀 ~ file: changed arr:", arr)
 function append(arr, element){
-    //becuse bad code arr.push refference type and it will make arr function mutate
+    //becuse bad code arr.push refference type and it will make arr array`s refference mutate
     arr.push(element)
     return arr
 }
@@ -20,4 +20,4 @@ console.log("new ", array)
 console.log("returned standalone arr: ", appendWithValue(array, 3))
 function appendWithValue(arr, item){
     return [...arr, item]
-}
+} 
