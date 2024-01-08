@@ -26,3 +26,18 @@ const removeDuplicationArr3 = (arr) => {
     .sort((a, b) => a - b);
 };
 console.log(removeDuplicationArr3(arr));
+
+const objArr = [
+  { name: "Abdul Doe", id: 1, age: 22 },
+  { name: "Fatima Futukka", id: 2, age: 62 },
+  { name: "Aisa Sıddıki", id: 3, age: 24 },
+];
+
+//v1
+//sort actually mutates the arr
+objArr.sort((surname1, surname2) => {
+  const surnameA = surname1.name.split(" ")[1];
+  const surnameB = surname2.name.split(" ")[1];
+  return surnameA < surnameB ? -1 : 1;
+});
+console.log(objArr);
