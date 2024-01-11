@@ -3,3 +3,4 @@
 const paragraphElement = document.querySelector("p");
 paragraphElement.innerHTML =
   "<p>" + paragraphElement.innerHTML.split(".").join(".</p><p>") + "</p>";
+
