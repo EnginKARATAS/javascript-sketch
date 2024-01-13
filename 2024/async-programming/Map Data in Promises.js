@@ -38,13 +38,14 @@ const getUserStatuses = () => {
   });
 };
 
+//v1.0
 getUsers().then((users) => {
   getUserStatuses().then((userStasuses) => {
     const mappedUsers = users.map((user) => {
       const isActive = userStatuses.find(
         (userStatus) => userStatus.id === user.id
       ).isActive;
-      return { ...user, isActive };
+      return { ...user, isActive }; 
     });
     console.log("mappedUsers", mappedUsers);
   });
