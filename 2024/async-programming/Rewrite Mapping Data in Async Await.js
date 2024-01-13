@@ -55,7 +55,7 @@ const getMapUsers = async () => {
     console.log("mappedUsers", mappedUsers);
   } catch (err) {
     console.log(err);
-  }
+  } 
 };
 
 getMapUsers();
