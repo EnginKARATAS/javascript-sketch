@@ -37,7 +37,7 @@ const getUserStatuses = () => {
     resolve(userStatuses);
   });
 };
-
+ 
 //v1.0
 getUsers().then((users) => {
   getUserStatuses().then((userStasuses) => {
