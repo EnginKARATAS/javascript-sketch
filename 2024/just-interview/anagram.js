@@ -26,5 +26,5 @@ const isAnagram2 = (str1, str2) => {
     if (str1.length !== str2.length) return false;
     const txt1 = str1.split("").sort().join("");
     const txt2 = str2.split("").sort().join("");
-    return txt1 === txt2
+    return txt1 === txt2 
 };
