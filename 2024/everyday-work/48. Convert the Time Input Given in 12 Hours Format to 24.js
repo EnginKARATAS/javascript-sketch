@@ -4,7 +4,7 @@
 // convertToZ4HrsFormat("12:33PM"); // 12:33
 // convertToZ4HrsFormat("01:59PM"); // 13:59
 // convertToZ4HrsFormat("11:8PM"); // 23:08
-// convertToZ4HrsFormat("10:02PM"); // 22:02 
+// convertToZ4HrsFormat("10:02PM"); // 22:02  
  
 const convertToZ4HrsFormat = (timeText) => {
   let leftTwo = timeText.toLowerCase().split("").slice(0, 2);
