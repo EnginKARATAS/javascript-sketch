@@ -12,7 +12,7 @@ const requestHandler = (url, options, attempts = 3) => {
         setTimeout(() => {
           requestHandler(url, options, attempts - 1);
         }, 3000);
-      });
+      }); 
   });
 };
 
