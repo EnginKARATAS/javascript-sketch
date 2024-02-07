@@ -9,7 +9,7 @@ var compose = function(functions) {
             return currentFunction(acc);
         }, x)
     }
-};
+}; 
 
 /**
  * const fn = compose([x => x + 1, x => 2 * x])
