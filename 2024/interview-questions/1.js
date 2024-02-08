@@ -1,21 +1,21 @@
-let array = "da2kr3a2"
+// let array = "da2kr3a2b"
+let array = "sskfssbbb9bbb";
 
-let longest = ""
+let longest = "";
+let lastLongestLength = 0;
 for (let i = 0; i < array.length; i++) {
-    console.log("🚀 ~ i:", i)
-    let val1 = array[i];
-    for (let k = i+1; k < array.length; k++) {
-        let val2 = array[k];
-        if(val1 === val2){
-            longest += val2
-            i++
-            k++
-            val1 = array[++i]
-            val2 = array[++k]
-            if (val2!=val1) {
-                break
-            }
-        }
+  console.log("🚀 ~ i:", i);
+  let val1 = array[i];
+  let counter = 0;
+  for (let k = i + 1; k < array.length; k++) {
+    let val2 = array[k];
+    if (val1 === val2) {
+      counter++;
+      longest += val2;
+      if (array[i + 1] !== array[k + 1])
+        lastLongestLength = counter;
+      break;
     }
+  }
 }
-console.log(longest);
+console.log(`longest:`, longest);
