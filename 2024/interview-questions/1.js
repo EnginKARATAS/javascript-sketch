@@ -9,7 +9,7 @@ for (let i = 0; i < array.length; i++) {
   let counter = 0;
   for (let k = i + 1; k < array.length; k++) {
     let val2 = array[k];
-    if (val1 === val2) {
+    if (val1 === val2) { 
       counter++;
       longest += val2;
       if (array[i + 1] !== array[k + 1])
