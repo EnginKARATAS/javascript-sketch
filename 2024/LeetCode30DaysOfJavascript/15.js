@@ -87,7 +87,7 @@ Output:
    {"time": 60, "returned": 10},
    {"time": 90, "returned": 10},
    {"time": 120, "returned": 10},
-   {"time": 150, "returned": 10}
+   {"time": 150, "returned": 10} 
 ]
 // Explanation: 
 // const cancelTimeMs = 165; 
