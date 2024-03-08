@@ -13,7 +13,7 @@ var debounce = function (fn, t) {
         //execute fn args after t sec
 
     }
-};
+}; 
 
 /**
  * const log = debounce(console.log, 100);
