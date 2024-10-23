@@ -7,7 +7,10 @@ function findEscaped(text) {
       insideHash = !insideHash;
     }
  
-      if (insideHash && text[i] === "!" && /[a-z]/.test(text[i + 1])) counter++;
+      if (insideHash && text[i] === "!" && /[a-z]/.test(text[i + 1])){
+        counter++
+        i++ //"!b" b is escaped character already
+      };
   
   }
   console.log(counter);
